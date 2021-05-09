@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="page">
-      <Header />
+      <Header loggedIn={loggedIn}/>
       <MenuCardList />
     </div>
   );
