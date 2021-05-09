@@ -1,0 +1,21 @@
+.menu-card-list {
+  padding: 10px;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+@media screen and (min-width: 525px) {
+  .menu-card-list {
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 752px) {
+  .menu-card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
