@@ -7,6 +7,11 @@
 }
 
 .main-page__title {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.main-page__article {
 
 }
 
@@ -21,4 +26,16 @@
   background-size: 70%;
   background-position-x: 50%;
   background-position-y: 50%;
+
+  transition: transform 0.3s ease-in-out 0.3s;
+}
+
+.main-page__button:hover {
+  transform: scale(1.05);
+}
+
+.main-page__subtitle {
+  margin: 0;
+  padding: 10px 0 0;
+  text-align: center;
 }

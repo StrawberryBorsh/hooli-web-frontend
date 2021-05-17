@@ -13,14 +13,14 @@ function App() {
 
   return (
     <div className="page">
-      <Main loggedIn={loggedIn}/>
+
       <Switch>
         <Route exact path="/">
-          <MenuCardList />
+          <Main loggedIn={loggedIn}/>
         </Route>
 
-        <Route exact path="/main">
-          <MainPage />
+        <Route exact path="/menu">
+          <MenuCardList />
         </Route>
 
         <Route path="*">
