@@ -4,12 +4,13 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import MenuCardList from "../MenuCardList/MenuCardList";
 import Main from "../Main/Main";
-import MainPage from "../MainPage/MainPage";
 
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(true);
-  const [cards, setCards] = useState('');
+
+  // ====== Обработчики попапров =========
+
 
   return (
     <div className="page">

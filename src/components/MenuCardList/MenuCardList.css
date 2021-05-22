@@ -1,4 +1,5 @@
 .menu-card-list {
+  padding: 100px 15px;
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(1, 1fr);
@@ -9,11 +10,15 @@
 @media screen and (min-width: 525px) {
   .menu-card-list {
     grid-template-columns: repeat(2, 1fr);
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
 @media screen and (min-width: 752px) {
   .menu-card-list {
     grid-template-columns: repeat(3, 1fr);
+    padding-right: 35px;
+    padding-left: 35px;
   }
 }

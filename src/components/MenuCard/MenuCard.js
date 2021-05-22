@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './MenuCard.css';
 import {Link} from "react-router-dom";
+import api from "../../utils/api";
 
 function MenuCard({ image }) {
 
@@ -16,6 +17,12 @@ function MenuCard({ image }) {
       setQuantity(quantity - 1);
     }
   }
+
+  useEffect(() => {
+    api.getCard()
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }, [])
 
   return(
     <article className="menu-card">

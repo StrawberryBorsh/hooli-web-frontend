@@ -33,7 +33,7 @@ class Api {
 
 // Объект для работы с API (для экспорта)
 const api = new Api({
-  url: 'https://hooli-312617.ew.r.appspot.com',
+  url: 'http://84.252.142.16',
   headers: {
     "Content-Type": "application/json",
   },
