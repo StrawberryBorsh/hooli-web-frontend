@@ -1,19 +1,40 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './MenuCardList.css';
 import MenuCard from "../MenuCard/MenuCard";
 
-import image_01 from '../../images/tom-yam.jpeg';
 import image_02 from '../../images/philli.jpeg';
 import image_03 from '../../images/gunkan-mcloud.jpeg';
+import api from "../../utils/api";
+import Header from "../Header/Header";
 
-function MenuCardList() {
+function MenuCardList(props) {
+
+  const [cardImage, setCardImage] = useState({});
+
+  useEffect(() => {
+    api.getCard()
+      .then((res) => {
+        setCardImage({
+          image: res.url,
+          title: res.name,
+        });
+      })
+      .catch((err) => console.log(err));
+  }, [])
+
   return(
-    <section className="menu-card-list">
-      <MenuCard image={image_01}/>
-      <MenuCard image={image_02}/>
-      <MenuCard image={image_03}/>
-    </section>
+    <div className="content">
+      <Header loggedIn={props.loggedIn} />
+      <section className="menu-card-list">
+        <MenuCard
+          image={cardImage.image}
+          title={cardImage.title}
+        />
+        <MenuCard image={image_02}/>
+        <MenuCard image={image_03}/>
+      </section>
+    </div>
   );
 }
 

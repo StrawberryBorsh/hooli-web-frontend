@@ -21,7 +21,7 @@ function App() {
         </Route>
 
         <Route exact path="/menu">
-          <MenuCardList />
+          <MenuCardList loggedIn={loggedIn}/>
         </Route>
 
         <Route path="*">

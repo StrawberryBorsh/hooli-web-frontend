@@ -4,7 +4,7 @@ import './MenuCard.css';
 import {Link} from "react-router-dom";
 import api from "../../utils/api";
 
-function MenuCard({ image }) {
+function MenuCard({ image, title }) {
 
   const [quantity, setQuantity] = useState(0);
 
@@ -18,15 +18,9 @@ function MenuCard({ image }) {
     }
   }
 
-  useEffect(() => {
-    api.getCard()
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, [])
-
   return(
     <article className="menu-card">
-      <h3 className="menu-card__title">Вкусный товар</h3>
+      <h3 className="menu-card__title">{title || 'Вкусный товар'}</h3>
       <img src={image} alt="" className="menu-card__image"/>
       <div className="menu-card__description-wrapper">
         <p className="menu-card__description">Какой-то вкусный текст про товар, и всё вот это вот</p>
